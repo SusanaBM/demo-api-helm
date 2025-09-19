@@ -9,8 +9,8 @@ app:
   environment: Development
 
 image:
-  repository: demoapiregistry.azurecr.io/demo-api
-  tag: latest
+  repository: aksdemo2025registry.azurecr.io/demo-api
+  tag: 0.0.1
   tagmigration: migration
 
 service:
@@ -32,7 +32,7 @@ ingressController:
   service:
     name: nginx-ingress-ingress-nginx-controller
     namespace: default
-    lbResourceGroup: MC_Diplomado_demoapi-aks_westus3
+    lbResourceGroup: mc_aks-demo-2025_group_aks-demo-2025_westus3
     pipName: demo-api-ip
 
 postgresql:
