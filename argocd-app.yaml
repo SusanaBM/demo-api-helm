@@ -1,0 +1,16 @@
+project: default
+source:
+  repoURL: https://github.com/SusanaBM/k8sRepository.git
+  path: K8s
+  targetRevision: HEAD
+  helm:
+    valueFiles:
+      - values.yaml
+destination:
+  server: https://kubernetes.default.svc
+  namespace: demo-api
+syncPolicy:
+  automated:
+    enabled: true
+  syncOptions:
+    - CreateNamespace=true

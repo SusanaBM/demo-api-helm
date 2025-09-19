@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.name }}
+  annotations:
+    helm.sh/hook: pre-install
+    helm.sh/hook-weight: "4"
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: {{ .Values.name }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.ingressController.service.name }}
+  namespace: {{ .Values.ingressController.service.namespace }}
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-resource-group: {{ .Values.ingressController.service.lbResourceGroup }}
+    service.beta.kubernetes.io/azure-pip-name: {{ .Values.ingressController.service.pipName }}
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+    - name: https
+      port: 443
+      targetPort: https
+  selector:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/component: controller
