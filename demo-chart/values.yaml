@@ -9,7 +9,7 @@ app:
   environment: Development
 
 image:
-  repository: demoapiregistry.azurecr.io/demoapi
+  repository: demoapiregistry.azurecr.io/demo-api
   tag: latest
   tagmigration: migration
 
