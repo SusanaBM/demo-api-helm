@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://susanabm.github.io/demo-api-helm/  # GitHub Pages del chart
     chart: demo-chart                                        # nombre del chart
-    targetRevision: 0.1.0
+    targetRevision: 0.1.1
     helm:
       values: |
         replicaCount: 2
