@@ -1,5 +1,5 @@
 name: demo-api
-namespace: demo-api-app
+namespace: demo-api
 
 replicaCount: 2
 
