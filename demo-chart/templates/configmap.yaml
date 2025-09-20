@@ -3,9 +3,6 @@ kind: ConfigMap
 metadata:
   name: {{ .Values.name }}-config
   namespace: {{ .Values.namespace }}
-  annotations:
-    helm.sh/hook: pre-install
-    helm.sh/hook-weight: "1"
 data:
   APP_NAME: "{{ .Values.app.name }}"
   APP_ENV: "{{ .Values.app.environment }}"

@@ -6,26 +6,21 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://susanabm.github.io/demo-api-helm/  # GitHub Pages del chart
-    chart: demo-chart                                        # nombre del chart
-    targetRevision: 0.1.1
+    repoURL: https://github.com/SusanaBM/demo-api-helm
+    path: demo-chart
+    targetRevision: HEAD
     helm:
-      values: |
-        replicaCount: 2
-        image:
-          repository: demoapiregistry.azurecr.io/demo-api
-          tag: latest
-        postgresql:
-          auth:
-            username: demo_user
-            password: demo_pass
-            database: pedidosdb
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: demo-api
   syncPolicy:
     automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+      prune: true        # opcional, elimina recursos que ya no estén en el repo
+      selfHeal: true     # opcional, repara drift automáticamente
+  ignoreDifferences:
+    - group: networking.k8s.io
+      kind: Ingress
+      jsonPointers:
+        - /status
