@@ -9,8 +9,8 @@ app:
   environment: Development
 
 image:
-  repository: demoapiregistry.azurecr.io/demo-api
-  tag: 523bb73
+  repository: aksdemo2025registry.azurecr.io/demo-api
+  tag: 0.0.1
   tagmigration: migration
 
 service:
