@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-api
+  name: demo-api-helm-app
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/SusanaBM/demo-api-helm
-    path: demo-chart
-    targetRevision: HEAD
+    repoURL: https://susanabm.github.io/demo-api-helm
+    chart: demo-chart
+    targetRevision: "*"   # usa siempre la última versión del chart
     helm:
       valueFiles:
         - values.yaml
@@ -17,10 +17,5 @@ spec:
     namespace: demo-api
   syncPolicy:
     automated:
-      prune: true        # opcional, elimina recursos que ya no estén en el repo
-      selfHeal: true     # opcional, repara drift automáticamente
-  ignoreDifferences:
-    - group: networking.k8s.io
-      kind: Ingress
-      jsonPointers:
-        - /status
+      prune: true       # elimina recursos que ya no existan en el chart
+      selfHeal: true 
