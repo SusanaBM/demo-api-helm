@@ -10,7 +10,7 @@ app:
 
 image:
   repository: demoapiregistry.azurecr.io/demo-api
-  tagfinal: fd3a28a
+  tagfinal: 3ba9dba
   tagmigration: migration
 
 service:

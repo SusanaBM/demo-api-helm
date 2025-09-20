@@ -3,7 +3,21 @@ entries:
   demo-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-09-20T21:22:24.586027738Z"
+    created: "2025-09-20T21:38:13.983781384Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: A Helm chart for Kubernetes
+    digest: 15a072df0aa1739cd2327813d1d7cb6632a2c0421198aef664131f529708d60f
+    name: demo-chart
+    type: application
+    urls:
+    - https://susanabm.github.io/demo-api-helm/demo-chart-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-20T21:38:13.945922916Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -17,7 +31,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-09-20T21:22:24.524084987Z"
+    created: "2025-09-20T21:38:13.914613127Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -31,7 +45,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-09-20T21:22:24.479654758Z"
+    created: "2025-09-20T21:38:13.87354863Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -45,7 +59,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-09-20T21:22:24.424533509Z"
+    created: "2025-09-20T21:38:13.834576486Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -57,4 +71,4 @@ entries:
     urls:
     - https://susanabm.github.io/demo-api-helm/demo-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2025-09-20T21:22:24.374168623Z"
+generated: "2025-09-20T21:38:13.797396607Z"
