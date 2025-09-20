@@ -3,7 +3,21 @@ entries:
   demo-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-09-20T21:38:13.983781384Z"
+    created: "2025-09-20T22:03:28.620199985Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.12.10
+    description: A Helm chart for Kubernetes
+    digest: 7c74710fb6338a2c492ee4283c1f17ac3c9cd75292998dbcceba011313283e1f
+    name: demo-chart
+    type: application
+    urls:
+    - https://susanabm.github.io/demo-api-helm/demo-chart-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-09-20T22:03:28.601573361Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -17,7 +31,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-09-20T21:38:13.945922916Z"
+    created: "2025-09-20T22:03:28.578917465Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -31,7 +45,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-09-20T21:38:13.914613127Z"
+    created: "2025-09-20T22:03:28.558135307Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -45,7 +59,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-09-20T21:38:13.87354863Z"
+    created: "2025-09-20T22:03:28.534875443Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -59,7 +73,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-09-20T21:38:13.834576486Z"
+    created: "2025-09-20T22:03:28.515932582Z"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -71,4 +85,4 @@ entries:
     urls:
     - https://susanabm.github.io/demo-api-helm/demo-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2025-09-20T21:38:13.797396607Z"
+generated: "2025-09-20T22:03:28.501116517Z"
