@@ -30,7 +30,7 @@ ingress:
 
 ingressController:
   service:
-    name: nginx-ingress-ingress-nginx-controller
+    name: nginx-ingress-ingress-nginx-controller-custom
     namespace: default
     lbResourceGroup: mc_aks-demo-2025_group_aks-demo-2025_westus3
     pipName: demo-api-ip
