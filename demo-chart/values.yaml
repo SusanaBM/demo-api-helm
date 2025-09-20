@@ -39,7 +39,7 @@ postgresql:
   image:
     registry: docker.io
     repository: postgres
-    tag: 16
+    tag: 78bc94e
   auth:
     username: demo_user
     password: demo_pass
