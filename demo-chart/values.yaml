@@ -1,5 +1,5 @@
 name: demo-api
-namespace: demo-api
+namespace: demo-api-app
 
 replicaCount: 2
 
@@ -9,8 +9,8 @@ app:
   environment: Development
 
 image:
-  repository: aksdemo2025registry.azurecr.io/demo-api
-  tag: 0.0.1
+  repository: demoapiregistry.azurecr.io/demo-api
+  tag: 523bb73
   tagmigration: migration
 
 service:
@@ -32,7 +32,7 @@ ingressController:
   service:
     name: nginx-ingress-ingress-nginx-controller
     namespace: default
-    lbResourceGroup: mc_aks-demo-2025_group_aks-demo-2025_westus3
+    lbResourceGroup: MC_Diplomado_demoapi-aks_westus3
     pipName: demo-api-ip
 
 postgresql:
