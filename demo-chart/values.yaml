@@ -10,7 +10,7 @@ app:
 
 image:
   repository: aksdemo2025registry.azurecr.io/demo-api
-  tag: 0.0.1
+  tag:ff73c07
   tagmigration: migration
 
 service:
@@ -39,7 +39,7 @@ postgresql:
   image:
     registry: docker.io
     repository: postgres
-    tag: 16
+    tag:ff73c07
   auth:
     username: demo_user
     password: demo_pass
